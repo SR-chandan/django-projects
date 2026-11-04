@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iPhone Products</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(231, 228, 223);
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color:   rgb(6, 169, 160);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: rgb(29, 27, 27);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #cf920e;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 25px;
+            color: rgb(80, 111, 111);
+            font-size: 36px;
+            letter-spacing: 2px;
+        }
+
+        .card {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-box {
+            color: #9b978c;
+            background: rgb(202, 185, 196);
+            border-radius: 100px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(83, 82, 82, 0.3);
+            transition: 0.3s;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(68, 66, 66, 0.4);
+        }
+
+        img {
+            width: 170px;
+            height: 250px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #239404;
+            font-size: 24px;
+        }
+
+        p {
+            color: #111211;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .price {
+            color: #2c292a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        strong {
+            color: #093f4b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Details</a>
+    </div>
+
+    <h1>iPhone Product Details</h1>
+
+    <div class="card">
+
+        {% for i in prod %}
+
+        <div class="product-box">
+
+            {% if i.image %}
+                <img src="{{ i.image.url }}" alt="{{ i.name }}">
+            {% endif %}
+
+            <h2>{{ i.name }}</h2>
+
+            <p>
+                <strong>Brand:</strong>
+                {{ i.brand }}
+            </p>
+
+            <p>
+                <strong>Material:</strong>
+                {{ i.material }}
+            </p>
+
+            <p class="price">
+                ₹{{ i.price }}
+            </p>
+
+            <p>
+                <strong>Description:</strong><br>
+                {{ i.description }}
+            </p>
+
+        </div>
+
+        {% empty %}
+
+        <h2>No products available.</h2>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Details</title>
+
+    <style>
+
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            border: 5px solid #212328;
+            min-height: 90vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin: 30px;
+        }
+
+        .employees {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .employee {
+            width: 250px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        /* Employee Image */
+        .employee img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2563eb;
+        }
+
+        .employee h2 {
+            color: #2563eb;
+        }
+
+        .employee p {
+            color: #444;
+            font-size: 16px;
+        }
+
+        .employee:hover {
+            transform: translateY(-10px);
+            transition: 0.3s;
+            box-shadow: 0 10px 25px gray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Employee Details</h1>
+
+    <div class="employees">
+
+        <!-- Employee 1 -->
+        <div class="employee">
+            <img src="images/chandan.jpg" alt="Chandan">
+
+            <h2>Chandan</h2>
+            <p><strong>EID:</strong> E101</p>
+            <p><strong>Department:</strong> IT</p>
+            <p><strong>Email:</strong> chandan@gmail.com</p>
+        </div>
+
+        <!-- Employee 2 -->
+        <div class="employee">
+            <img src="images/rahul.jpg" alt="Rahul">
+
+            <h2>Rahul</h2>
+            <p><strong>EID:</strong> E102</p>
+            <p><strong>Department:</strong> HR</p>
+            <p><strong>Email:</strong> rahul@gmail.com</p>
+        </div>
+
+        <!-- Employee 3 -->
+        <div class="employee">
+            <img src="images/arun.jpg" alt="Arun">
+
+            <h2>Arun</h2>
+            <p><strong>EID:</strong> E103</p>
+            <p><strong>Department:</strong> Finance</p>
+            <p><strong>Email:</strong> arun@gmail.com</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

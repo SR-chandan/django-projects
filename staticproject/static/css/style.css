@@ -1,0 +1,22 @@
+.image-box {
+    width: 500px;
+    height: 700px;
+
+    background-image: url("../images/hulk.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.image-box h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    margin-bottom: 20px;
+}

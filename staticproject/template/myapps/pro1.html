@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Django Page</title>
+   <style>
+    body {
+        background-image: url("{% static 'images/hulk1.png' %}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .PRO {
+        text-align: center;
+        border: 20px solid rgb(102, 108, 102);
+        border-radius: 10px;
+        color: rgb(228, 232, 38);
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Georgia, serif;
+        text-decoration: underline;
+        text-decoration-style: double;
+        text-decoration-color: rgb(173, 187, 173);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        padding: 20px;
+    }
+
+    h2 {
+        width: 80%;
+        margin: 30px auto;
+        padding: 25px;
+        border: 5px solid green;
+        border-radius: 20px;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1.7;
+        text-align: justify;
+        background-color: rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 20px green;
+        letter-spacing: 1px;
+    }
+</style>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <h1 class="PRO">HELLO FRIENDS!! WE ARE GONNA EXPLORE A NEW CONCEPT CALLED STATICPROJECT</h1>
+
+    <div class="image-box">
+    </div>
+    <h2>The Hulk is one of Marvel’s most iconic superheroes, created by writer Stan Lee and artist Jack Kirby in 1962. Known for his immense strength and towering green form, the Hulk is the alter ego of Dr. Bruce Banner, a brilliant scientist who transforms into the creature after exposure to gamma radiation. While Banner is calm, intelligent, and reserved, the Hulk embodies raw power and uncontrollable rage, often triggered by intense emotions. This duality makes him both a hero and a danger, as his strength can save lives but also cause massive destruction. Over the years, the Hulk has been portrayed as a misunderstood figure—feared by many, yet deeply human in his struggle to control his inner monster. His story is a powerful metaphor for inner conflict, resilience, and the balance between intellect and instinct.</h2>
+
+</body>
+</html>
